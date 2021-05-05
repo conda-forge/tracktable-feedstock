@@ -30,13 +30,13 @@ requirements:
     - pytz
     - shapely
     - tqdm
-    - boost
-    - boost-cpp
+    - boost {{ boost }}
+    - boost-cpp {{ boost }}.*
 
   run:
     - python
-    - boost
-    - boost-cpp
+    - boost {{ boost }}
+    - boost-cpp {{ boost }}.*
     - cartopy >=0.18.0
     - folium >=0.11.0
     - numpy
