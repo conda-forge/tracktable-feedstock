@@ -1,9 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 boost:
-- 1.74.0
-boost_cpp:
-- 1.74.0
+- '1.74'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -18,8 +16,6 @@ numpy:
 - '1.17'
 pin_run_as_build:
   boost:
-    max_pin: x.x.x
-  boost-cpp:
     max_pin: x.x.x
   python:
     min_pin: x.x
