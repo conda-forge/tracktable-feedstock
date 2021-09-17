@@ -1,7 +1,7 @@
 
 {% set name = "tracktable" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "afe9d27e4371ade061f195eaeb984468231245094ed0aaf294818f5e4b84c452" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "6044cdade54674f0ec4f6625400360c0c8365ce1fcff9719f2c2e62f6998fa1d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
 
@@ -47,9 +47,9 @@ requirements:
 test:
   imports:
     - tracktable
-    - tracktable.analysis.dbscan
-    - tracktable.analysis.distance_geometry
-    - tracktable.analysis.rtree
+    - tracktable.algorithms.dbscan
+    - tracktable.algorithms.distance_geometry
+    - tracktable.domain.rtree
     - tracktable.core.geomath
     - tracktable.domain.cartesian2d
     - tracktable.domain.cartesian3d
