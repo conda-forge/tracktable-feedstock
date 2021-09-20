@@ -49,9 +49,9 @@ test:
     - tracktable
     - tracktable.algorithms.dbscan
     - tracktable.algorithms.distance_geometry
-    - import tracktable.applications.assemble_trajectories
-    - import tracktable.applications.trajectory_splitter
-    - import tracktable.applications.prediction
+    - tracktable.applications.assemble_trajectories
+    - tracktable.applications.trajectory_splitter
+    - tracktable.applications.prediction
     - tracktable.domain.rtree
     - tracktable.core.geomath
     - tracktable.domain.cartesian2d
