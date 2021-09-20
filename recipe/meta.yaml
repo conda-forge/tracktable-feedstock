@@ -1,7 +1,7 @@
 
 {% set name = "tracktable" %}
-{% set version = "1.6.0" %}
-{% set sha256 = "b55a322634055a311094b99ca0d4de15fc2232ada82039f8d54410308232d1e7" %}
+{% set version = "1.6.0.1" %}
+{% set sha256 = "e75b593268ed08b64db88672d7facfd2e3bac553e6d2c4f10bdf84f559e27c55" %}
 
 package:
   name: {{ name|lower }}
@@ -49,6 +49,9 @@ test:
     - tracktable
     - tracktable.algorithms.dbscan
     - tracktable.algorithms.distance_geometry
+    - import tracktable.applications.assemble_trajectories
+    - import tracktable.applications.trajectory_splitter
+    - import tracktable.applications.prediction
     - tracktable.domain.rtree
     - tracktable.core.geomath
     - tracktable.domain.cartesian2d
