@@ -1,7 +1,7 @@
 
 {% set name = "tracktable" %}
 {% set version = "1.6.0.2" %}
-{% set sha256 = "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed" %}
+{% set sha256 = "f3a16b52cccec750f3a9bee6826936ad68d24ad96c5b85f26b83ff8b5b6c4525" %}
 
 package:
   name: {{ name|lower }}
