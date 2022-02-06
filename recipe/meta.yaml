@@ -20,6 +20,7 @@ requirements:
     - make   # [unix]
   host:
     - python
+    - setuptools
     - numpy
     - cartopy >=0.18.0
     - pytz
@@ -29,6 +30,7 @@ requirements:
     - boost-cpp
   run:
     - python
+    - setuptools
     - boost
     - boost-cpp
     - cartopy >=0.18.0
