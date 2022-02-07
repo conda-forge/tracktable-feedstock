@@ -1,7 +1,5 @@
-
 {% set name = "tracktable" %}
 {% set version = "1.6.0.2" %}
-{% set sha256 = "f3a16b52cccec750f3a9bee6826936ad68d24ad96c5b85f26b83ff8b5b6c4525" %}
 
 package:
   name: {{ name|lower }}
@@ -9,34 +7,32 @@ package:
 
 source:
   url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: f3a16b52cccec750f3a9bee6826936ad68d24ad96c5b85f26b83ff8b5b6c4525
 
 build:
-  number: 0
+  number: 1
 
 requirements:
-
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.19.5
     - ninja  # [win]
     - make   # [unix]
-    - setuptools
-
   host:
     - python
+    - setuptools
     - numpy
     - cartopy >=0.18.0
     - pytz
     - shapely
     - tqdm
-    - boost {{ boost }}
-    - boost-cpp {{ boost }}
-
+    - boost
+    - boost-cpp
   run:
     - python
-    - boost {{ boost }}
-    - boost-cpp {{ boost }}
+    - setuptools
+    - boost
+    - boost-cpp
     - cartopy >=0.18.0
     - folium >=0.11.0
     - numpy
