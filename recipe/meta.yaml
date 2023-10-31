@@ -30,6 +30,7 @@ requirements:
     - boost >=1.82.0
     - boost-cpp
     - pip
+    - nbconvert
   run:
     - python
     - setuptools
