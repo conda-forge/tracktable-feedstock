@@ -10,4 +10,4 @@ cmake ${CMAKE_ARGS} \
 make -j${CPU_COUNT}
 make install
 cd ${PREFIX}
-${PYTHON} ${SRC_DIR}/packaging/setup-generic.py install
+${PYTHON} -m pip install --no-deps
