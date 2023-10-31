@@ -1,5 +1,5 @@
 # Build Linux or MacOS package from tracktable source
-HERE=$(PWD)
+HERE=${PWD}
 mkdir build
 mkdir install
 
