@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  sha256: 62800f38f4ca25d608ac21cb4d2310de2a29a77f8fb87be498d29c67606bb2ac
 
 build:
   number: 0
