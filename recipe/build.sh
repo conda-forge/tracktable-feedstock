@@ -10,6 +10,8 @@ cmake ${CMAKE_ARGS} \
         -D Python3_EXECUTABLE:FILEPATH=${PYTHON} \
         -D Python3_ROOT_DIR:PATH=${PREFIX} \
         -D CMAKE_INSTALL_PREFIX:PATH=${HERE}/install \
+        -D BUILD_TESTING=OFF \
+        -D BUILD_EXAMPLES=OFF \
         $SRC_DIR
 make -j${CPU_COUNT}
 make install
