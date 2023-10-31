@@ -24,5 +24,5 @@ ninja install
 if errorlevel 1 exit 1
 cd %PREFIX%
 if errorlevel 1 exit 1
-%PYTHON% %SRC_DIR%/packaging/setup-generic.py install
+%PYTHON% -m pip install --no-deps
 if errorlevel 1 exit 1
