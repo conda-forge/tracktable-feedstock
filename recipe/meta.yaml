@@ -12,7 +12,7 @@ source:
     add_shared_libraries_to_python_tree.diff
 
 build:
-  number: 10
+  number: 11
 
 requirements:
   build:
@@ -26,23 +26,21 @@ requirements:
     - setuptools
     - numpy
     - cartopy >=0.18.0
-    - jupyter
+    - jupyter_core
     - nbconvert
     - pytz
     - shapely
     - tqdm
-    - boost >=1.82.0
-    - boost-cpp
+    - libboost-devel >=1.82.0
+    - libboost-python-devel >=1.82.0
     - pip
   run:
     - python
     - setuptools
-    - boost >=1.82.0
-    - boost-cpp
+    - libboost >=1.82.0
+    - libboost-python >=1.82.0
     - cartopy >=0.18.0
     - folium >=0.11.0
-    - libboost
-    - libboost-python
     - matplotlib-base
     - numpy
     - pyshp
