@@ -1,5 +1,5 @@
 {% set name = "tracktable" %}
-{% set version = "1.6.0.2" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,18 @@ package:
 
 source:
   url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f3a16b52cccec750f3a9bee6826936ad68d24ad96c5b85f26b83ff8b5b6c4525
+  sha256: 62800f38f4ca25d608ac21cb4d2310de2a29a77f8fb87be498d29c67606bb2ac
+  patches:
+    add_shared_libraries_to_python_tree.diff
 
 build:
-  number: 1
+  number: 11
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.19.5
+    - boost >=1.82.0
     - ninja  # [win]
     - make   # [unix]
   host:
@@ -23,22 +26,29 @@ requirements:
     - setuptools
     - numpy
     - cartopy >=0.18.0
+    - jupyter_core
+    - nbconvert
     - pytz
     - shapely
     - tqdm
-    - boost
-    - boost-cpp
+    - libboost-devel >=1.82.0
+    - libboost-python-devel >=1.82.0
+    - pip
   run:
     - python
     - setuptools
-    - boost
-    - boost-cpp
+    - libboost >=1.82.0
+    - libboost-python >=1.82.0
     - cartopy >=0.18.0
     - folium >=0.11.0
+    - matplotlib-base
     - numpy
     - pyshp
     - pytz >=2020.1
+    - shapely
+    - six
     - tqdm
+    - tracktable-data >=1.7.2
 
 test:
   imports:
@@ -76,5 +86,4 @@ about:
 extra:
   recipe-maintainers:
     - pabaxley
-    - mjfadem
     - atwilso
