@@ -24,13 +24,14 @@ requirements:
     - setuptools
     - numpy
     - cartopy >=0.18.0
+    - jupyter
+    - nbconvert
     - pytz
     - shapely
     - tqdm
     - boost >=1.82.0
     - boost-cpp
     - pip
-    - nbconvert
   run:
     - python
     - setuptools
@@ -38,6 +39,8 @@ requirements:
     - boost-cpp
     - cartopy >=0.18.0
     - folium >=0.11.0
+    - libboost
+    - libboost-python
     - matplotlib
     - numpy
     - pyshp
