@@ -1,0 +1,14 @@
+migrator_ts: 1698891366
+__migrator:
+  kind: version
+  migration_number: 1
+  commit_message: "Build with Boost 1.82"
+boost:
+  - 1.82
+boost_cpp: 
+  - 1.82
+libboost_devel:
+  - 1.82
+libboost_python_devel:
+  - 1.82
+
