@@ -1,5 +1,7 @@
-## About Tracktable
+About tracktable-feedstock
+==========================
 
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tracktable-feedstock/blob/main/LICENSE.txt)
 
 Home: https://tracktable.sandia.gov/
 
@@ -14,7 +16,8 @@ Documentation: https://tracktable.readthedocs.io/en/latest/
 Tracktable is for analyzing trajectories from moving objects.  It provides modules to read in points/trajectories, assemble trajectories from points, compute features and feature vectors for trajectories, run DBSCAN clustering, search for similar trajectories, and render the results in static or dynamic maps.
 
 
-## Current build status
+Current build status
+====================
 
 
 <table>
@@ -122,14 +125,15 @@ Tracktable is for analyzing trajectories from moving objects.  It provides modul
   </tr>
 </table>
 
-## Current release info
-
+Current release info
+====================
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tracktable-green.svg)](https://anaconda.org/conda-forge/tracktable) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tracktable.svg)](https://anaconda.org/conda-forge/tracktable) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tracktable.svg)](https://anaconda.org/conda-forge/tracktable) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tracktable.svg)](https://anaconda.org/conda-forge/tracktable) |
 
-## Installing tracktable
+Installing tracktable
+=====================
 
 Installing `tracktable` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
@@ -176,7 +180,8 @@ mamba repoquery depends tracktable --channel conda-forge
 ```
 
 
-## About conda-forge
+About conda-forge
+=================
 
 [![Powered by
 NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
@@ -203,7 +208,8 @@ this feedstock's supporting files (e.g. the CI configuration files) with ``conda
 
 For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
-## Terminology
+Terminology
+===========
 
 **feedstock** - the conda recipe (raw material), supporting scripts and CI configuration.
 
@@ -215,7 +221,8 @@ For more information please check the [conda-forge documentation](https://conda-
                   produce the finished article (built conda distributions)
 
 
-## Updating tracktable-feedstock
+Updating tracktable-feedstock
+=============================
 
 If you would like to improve the tracktable recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
@@ -236,8 +243,8 @@ In order to produce a uniquely identifiable distribution:
    the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
-## Feedstock Maintainers
-
+Feedstock Maintainers
+=====================
 
 * [@atwilso](https://github.com/atwilso/)
 * [@pabaxley](https://github.com/pabaxley/)

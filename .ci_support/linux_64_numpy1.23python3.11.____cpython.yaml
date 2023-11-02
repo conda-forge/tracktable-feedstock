@@ -1,7 +1,5 @@
-boost:
-- 1.82.0
 boost_cpp:
-- 1.82.0
+- 1.78.0
 cdt_name:
 - cos6
 channel_sources:
@@ -17,8 +15,6 @@ docker_image:
 numpy:
 - '1.23'
 pin_run_as_build:
-  boost:
-    max_pin: x.x.x
   boost-cpp:
     max_pin: x.x.x
   python:
