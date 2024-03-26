@@ -12,11 +12,12 @@ source:
     add_shared_libraries_to_python_tree.diff
 
 build:
-  number: 12
+  number: 13
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake >=3.19.5
     - boost >=1.82.0
     - ninja  # [win]
