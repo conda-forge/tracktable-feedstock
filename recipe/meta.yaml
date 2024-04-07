@@ -19,7 +19,6 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake >=3.19.5
-    - boost >=1.82.0
     - ninja  # [win]
     - make   # [unix]
   host:
@@ -32,14 +31,12 @@ requirements:
     - pytz
     - shapely
     - tqdm
-    - libboost-devel >=1.82.0
-    - libboost-python-devel >=1.82.0
+    - libboost-devel
+    - libboost-python-devel
     - pip
   run:
     - python
     - setuptools
-    - libboost >=1.82.0
-    - libboost-python >=1.82.0
     - cartopy >=0.18.0
     - folium >=0.11.0
     - matplotlib-base
