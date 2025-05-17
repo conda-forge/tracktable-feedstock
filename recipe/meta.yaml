@@ -1,5 +1,5 @@
 {% set name = "tracktable" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,11 @@ package:
 
 source:
   url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 62800f38f4ca25d608ac21cb4d2310de2a29a77f8fb87be498d29c67606bb2ac
-  patches:
-    add_shared_libraries_to_python_tree.diff
+  sha256: 74928d4d83f2689ec5c1526435c4edd8c99ffe648b99f0efa9c3ae93347addec
+  patches: add_shared_libraries_to_python_tree.diff
 
 build:
-  number: 14
+  number: 0
 
 requirements:
   build:
@@ -76,11 +75,7 @@ about:
   license_family: BSD
   summary: 'Trajectory Analysis and Rendering'
   description: >
-    Tracktable is for analyzing trajectories from moving objects.  It
-    provides modules to read in points/trajectories, assemble trajectories
-    from points, compute features and feature vectors for trajectories,
-    run DBSCAN clustering, search for similar trajectories, and render
-    the results in static or dynamic maps.
+    Tracktable is for analyzing trajectories from moving objects.  It provides modules to read in points/trajectories, assemble trajectories from points, compute features and feature vectors for trajectories, run DBSCAN clustering, search for similar trajectories, and render the results in static or dynamic maps.
   dev_url: https://github.com/sandialabs/tracktable
   doc_url: https://tracktable.readthedocs.io/en/latest/
 
