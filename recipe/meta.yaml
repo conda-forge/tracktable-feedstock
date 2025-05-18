@@ -1,18 +1,16 @@
 {% set name = "tracktable" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 62800f38f4ca25d608ac21cb4d2310de2a29a77f8fb87be498d29c67606bb2ac
-  patches:
-    add_shared_libraries_to_python_tree.diff
+  git_url: https://github.com/sandialabs/tracktable
+  git_rev: v1.7.2-bootstrap
 
 build:
-  number: 14
+  number: 1
 
 requirements:
   build:
