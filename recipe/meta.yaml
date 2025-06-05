@@ -19,6 +19,8 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
+    - git
+    - git-lfs
     - cmake >=3.19.5
     - ninja  # [win]
     - make   # [unix]
