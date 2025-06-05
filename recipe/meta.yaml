@@ -26,6 +26,12 @@ requirements:
     - make   # [unix]
   host:
     - python
+    # comment from @travishathaway to @h-vetinari on conda-build issue #4882:
+    # try adding git-lfs to either the the build or host section to make
+    # the LFS error go away.
+    # maybe both?  just for good measure?
+    - git
+    - git-lfs
     - setuptools
     - numpy
     - cartopy >=0.18.0
