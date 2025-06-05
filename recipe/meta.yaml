@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/sandialabs/tracktable
-  git_rev: 50a551c476058fb0d92dbfd67ac02d3ec1ffffbe
+  git_rev: v1.7.2-rc5
 
 build:
   number: 2
