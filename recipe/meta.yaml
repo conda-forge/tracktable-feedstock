@@ -7,10 +7,18 @@ package:
 
 source:
   git_url: https://github.com/sandialabs/tracktable
-  git_rev: v1.7.2-bootstrap
+  git_rev: v1.7.2-rc6
 
 build:
-  number: 1
+  number: 3
+
+# About git-lfs:  There are files stored in LFS in the
+# tracktable-docs and tracktable-data repositories.  These
+# are included as submodules of of Tracktable.
+#
+# It is likely that we only need git-lfs in the host environment,
+# if that, but since I'm chasing a bug in conda-build I don't
+# yet know for sure.
 
 requirements:
   build:
@@ -19,11 +27,19 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
+    - git
+    - git-lfs
     - cmake >=3.19.5
     - ninja  # [win]
     - make   # [unix]
   host:
     - python
+    # comment from @travishathaway to @h-vetinari on conda-build issue #4882:
+    # try adding git-lfs to either the the build or host section to make
+    # the LFS error go away.
+    # maybe both?  just for good measure?
+    - git
+    - git-lfs
     - setuptools
     - numpy
     - cartopy >=0.18.0
