@@ -12,6 +12,14 @@ source:
 build:
   number: 2
 
+# About git-lfs:  There are files stored in LFS in the
+# tracktable-docs and tracktable-data repositories.  These
+# are included as submodules of of Tracktable.
+#
+# It is likely that we only need git-lfs in the host environment,
+# if that, but since I'm chasing a bug in conda-build I don't
+# yet know for sure.
+
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
