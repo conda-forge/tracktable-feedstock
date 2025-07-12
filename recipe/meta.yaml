@@ -10,7 +10,7 @@ source:
   git_rev: v1.7.3-rc1
 
 build:
-  number: 1
+  number: 2
 
 # About git-lfs:  There are files stored in LFS in the
 # tracktable-docs and tracktable-data repositories.  These
