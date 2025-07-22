@@ -1,21 +1,27 @@
 {% set name = "tracktable" %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/sandialabs/tracktable
-  git_rev: v1.7.2-bootstrap
+  # Source code proper
+  url: https://github.com/sandialabs/tracktable/archive/refs/tags/v1.7.3.tar.gz
+  sha256: cffd0896ce751ed097c57c893734fa6fb56d116c2bfef236145b011f482cd1e4
+
+# source:
+  # Documentation so we can clean and pull in notebooks
+#  url: https://github.com/sandialabs/tracktable-docs/archive/refs/tags/v1.7.3.tar.gz
+#  sha256: 14aef19e58e3db5b31275afe7e6f45a2341dd706c945523b54673a5ca14ceeb7
+#    folder: tracktable-docs
 
 build:
-  number: 1
+  number: 5
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
@@ -71,7 +77,6 @@ about:
   license_file: LICENSE.txt
   license: BSD-2-Clause
   license_url: https://opensource.org/licenses/BSD-2-Clause
-  license_family: BSD
   summary: 'Trajectory Analysis and Rendering'
   description: >
     Tracktable is for analyzing trajectories from moving objects.  It
