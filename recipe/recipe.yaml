@@ -1,0 +1,103 @@
+schema_version: 1
+
+context:
+  name: tracktable
+  version: 1.7.2
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  # Source code proper
+  - url: https://github.com/sandialabs/tracktable/archive/refs/tags/v1.7.3.tar.gz
+    sha256: cffd0896ce751ed097c57c893734fa6fb56d116c2bfef236145b011f482cd1e4
+
+  # Documentation archive containing notebooks
+  - url: https://github.com/sandialabs/tracktable-docs/archive/refs/tags/v1.7.3.tar.gz
+    sha256: ea746f66daba98df6143f8242225a1ecb15d4e7722a6769b0e7604c671e4e61e
+    target_directory: tracktable-docs
+
+build:
+  number: 5
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: numpy
+    - if: build_platform != target_platform
+      then: cross-python_{{ target_platform }}
+    - ${{ compiler('cxx') }}
+    - cmake >=3.19.5
+    - if: win
+      then: ninja
+    - if: unix
+      then: make
+  host:
+    - python
+    - setuptools
+    - numpy
+    - cartopy >=0.18.0
+    - jupyter_core
+    - nbconvert
+    - pytz
+    - shapely
+    - tqdm
+    - libboost-devel
+    - libboost-python-devel
+    - pip
+  run:
+    - python
+    - setuptools
+    - cartopy >=0.18.0
+    - folium >=0.11.0
+    - matplotlib-base
+    - numpy
+    - pyshp
+    - pytz >=2020.1
+    - shapely
+    - six
+    - tqdm
+    - tracktable-data >=1.7.2
+
+tests:
+  - python:
+      imports:
+        - tracktable
+        - tracktable.algorithms.dbscan
+        - tracktable.algorithms.distance_geometry
+        - tracktable.applications.assemble_trajectories
+        - tracktable.applications.trajectory_splitter
+        - tracktable.applications.prediction
+        - tracktable.domain.rtree
+        - tracktable.core.geomath
+        - tracktable.domain.cartesian2d
+        - tracktable.domain.cartesian3d
+        - tracktable.domain.feature_vectors
+        - tracktable.domain.terrestrial
+        - tracktable.info.timezones
+        - tracktable.render.render_trajectories
+
+about:
+  license_file: LICENSE.txt
+  license: BSD-2-Clause
+  summary: Trajectory Analysis and Rendering
+  description: >
+    Tracktable is for analyzing trajectories from moving objects.  It
+    provides modules to read in points/trajectories, assemble trajectories
+    from points, compute features and feature vectors for trajectories,
+    run DBSCAN clustering, search for similar trajectories, and render
+    the results in static or dynamic maps.
+  homepage: https://tracktable.sandia.gov/
+  repository: https://github.com/sandialabs/tracktable
+  documentation: https://tracktable.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - pabaxley
+    - atwilso
+
+<conda_recipe_manager.types.SentinelType object at 0x102774980>:  # source:
+  # Documentation so we can clean and pull in notebooks
