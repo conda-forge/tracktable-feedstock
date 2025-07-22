@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/sandialabs/tracktable
-  git_rev: v1.7.3-rc1
+  url: https://github.com/sandialabs/tracktable/archive/refs/tags/v1.7.3.tar.gz
+  sha256: cffd0896ce751ed097c57c893734fa6fb56d116c2bfef236145b011f482cd1e4
 
 build:
-  number: 3
+  number: 4
 
 # About git-lfs:  There are files stored in LFS in the
 # tracktable-docs and tracktable-data repositories.  These
