@@ -14,7 +14,10 @@ cmake ${CMAKE_ARGS} \
         -D BUILD_EXAMPLES=OFF \
         -D CMAKE_CXX_FLAGS="-D_LIBCPP_DISABLE_AVAILABILITY" \
         $SRC_DIR
-make -j${CPU_COUNT}
+# Parallel builds are causing us to run out of memory, so
+# back off to just one process.
+#make -j${CPU_COUNT}
+make
 make install
 cd ${HERE}/install
 ${PYTHON} -m pip install --no-deps .
