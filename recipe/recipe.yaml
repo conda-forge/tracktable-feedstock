@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tracktable
-  version: 1.7.2
+  version: 1.7.3
 
 package:
   name: ${{ name|lower }}
@@ -10,11 +10,11 @@ package:
 
 source:
   # Source code proper
-  - url: https://github.com/sandialabs/tracktable/archive/refs/tags/v1.7.3.tar.gz
+  - url: https://github.com/sandialabs/tracktable/archive/refs/tags/v{{ version }}.tar.gz
     sha256: cffd0896ce751ed097c57c893734fa6fb56d116c2bfef236145b011f482cd1e4
 
   # Documentation archive containing notebooks
-  - url: https://github.com/sandialabs/tracktable-docs/archive/refs/tags/v1.7.3.tar.gz
+  - url: https://github.com/sandialabs/tracktable-docs/archive/refs/tags/v{{ version }}.tar.gz
     sha256: ea746f66daba98df6143f8242225a1ecb15d4e7722a6769b0e7604c671e4e61e
     target_directory: tracktable-docs
 
