@@ -100,6 +100,3 @@ extra:
   recipe-maintainers:
     - pabaxley
     - atwilso
-
-<conda_recipe_manager.types.SentinelType object at 0x102774980>:  # source:
-  # Documentation so we can clean and pull in notebooks
