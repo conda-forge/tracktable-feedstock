@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tracktable-feed
 
 Home: https://tracktable.sandia.gov/
 
-Package license: [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)
+Package license: BSD-2-Clause
 
 Summary: Trajectory Analysis and Rendering
 
@@ -14,7 +14,6 @@ Development: https://github.com/sandialabs/tracktable
 Documentation: https://tracktable.readthedocs.io/en/latest/
 
 Tracktable is for analyzing trajectories from moving objects.  It provides modules to read in points/trajectories, assemble trajectories from points, compute features and feature vectors for trajectories, run DBSCAN clustering, search for similar trajectories, and render the results in static or dynamic maps.
-
 
 Current build status
 ====================

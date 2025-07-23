@@ -12,6 +12,7 @@ cmake ${CMAKE_ARGS} \
         -D CMAKE_INSTALL_PREFIX:PATH=${HERE}/install \
         -D BUILD_TESTING=OFF \
         -D BUILD_EXAMPLES=OFF \
+        -D CMAKE_CXX_FLAGS="-D_LIBCPP_DISABLE_AVAILABILITY" \
         $SRC_DIR
 # Parallel builds are causing us to run out of memory, so
 # back off to just one process.

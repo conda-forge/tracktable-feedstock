@@ -1,3 +1,4 @@
+conda_build_tool: rattler-build
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
