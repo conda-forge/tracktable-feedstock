@@ -19,16 +19,15 @@ source:
     target_directory: tracktable-docs
 
 build:
-  number: 5
+  number: 6
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: numpy
-    - if: build_platform != target_platform
-      then: cross-python_{{ target_platform }}
+      then:
+        - python
+        - numpy
+        - cross-python_{{ target_platform }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - cmake >=3.19.5
