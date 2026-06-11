@@ -19,7 +19,7 @@ source:
     target_directory: tracktable-docs
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:
